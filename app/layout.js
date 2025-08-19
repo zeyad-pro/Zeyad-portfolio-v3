@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
                 animate={{ scale: 1 }}
                 exit={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl font-bold text-red-500"
+                className="text-3xl font-bold text-red-500 font-sans"
               >       <CursorCircle />
                 مرحبــا
               </motion.h1>
