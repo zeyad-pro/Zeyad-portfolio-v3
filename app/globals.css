@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1B1B1B;
+  --foreground: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1B1B1B;
+    --foreground: #fff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+::-webkit-scrollbar {
+  background-color: #ffffff00;
+  -webkit-filter: blur(80px);
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ef4633e7, #721309e7);
+  scrollbar-width: thin;
+  border-radius: 22px;
+
+}
+
+
+html {
+  scroll-behavior: smooth !important;
+  overscroll-behavior: contain !important;
+}
+
+/* في ملف globals.css أو أي ملف CSS */
+/* الشكل الافتراضي للماوس */
+body {
+  cursor: url('/cursor/curs/cursor.ico'), default;
+}
+
+/* اللينكات والأزرار */
+a, button {
+  cursor: url('/cursor/curs/cursor (1).ico'), pointer;
+}
+
+/* العناوين والباراجراف */
+h1, h2, h3, p {
+  cursor: url('/cursor/curs/right.ico'), auto;
+}
+
+/* لو عايز مؤشر الكتابة الطبيعي مع الحقول */
+input, textarea {
+  cursor: url('/cursor/curs/right-arrow.ico'), text;
+}
+
