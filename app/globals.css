@@ -49,7 +49,7 @@ body {
 
 /* اللينكات والأزرار */
 a, button {
-  cursor: url('/cursor/curs/cursor (1).ico'), pointer;
+  cursor: url('/cursor/curs/right-arrow.ico'), pointer;
 }
 
 /* العناوين والباراجراف */
@@ -62,3 +62,9 @@ input, textarea {
   cursor: url('/cursor/curs/right-arrow.ico'), text;
 }
 
+
+html, body {
+  overscroll-behavior: auto; /* السماح بالباونص */
+}
+
+ 

@@ -7,6 +7,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import CursorCircle from "./components/CursorCircle";
 import ParticlesBackground from "./components/ParticlesBackground";
+import LenisProvider from "./components/lenis";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -65,11 +66,11 @@ export default function RootLayout({ children }) {
           transition={{ type: "spring", stiffness: 70, damping: 20 }}
           className="min-h-screen"
         >
-          <Navbar />
+       <LenisProvider>   <Navbar />
           <ParticlesBackground />
-          {children}
+        {children} 
           <CursorCircle />
-          <Footer />
+          <Footer /></LenisProvider> 
         </motion.div>
       </body>
     </html>
