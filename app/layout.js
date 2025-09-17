@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const cairo = Cairo({
-  variable: "--font-Cairo",
-  subsets: ["normal"],
-  weight: ["400"], // لازم تحدد الوزن عشان Lalezar مش variable font
+  variable: "--font-cairo",
+  subsets: ["arabic"],
+  weight: ["400"], // تختار الوزن اللي عايزه
 });
 
 export default function RootLayout({ children }) {
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
                 animate={{ scale: 1 }}
                 exit={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className={`text-5xl text-red-500 font-bold ${cairo.className}`}
+                className={`text-5xl text-red-500 font-bolt ${cairo.className}`}
               >
                 {" "}
                 <CursorCircle />
