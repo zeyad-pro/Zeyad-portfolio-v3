@@ -54,7 +54,7 @@ a, button {
 
 /* العناوين والباراجراف */
 h1, h2, h3, p {
-  cursor: url('/cursor/curs/right.ico'), auto;
+  cursor: url('/cursor/curs/right-arrow.ico'), auto;
 }
 
 /* لو عايز مؤشر الكتابة الطبيعي مع الحقول */
@@ -67,4 +67,7 @@ html, body {
   overscroll-behavior: auto; /* السماح بالباونص */
 }
 
- 
+*{
+  /* sellection text color */
+  
+}

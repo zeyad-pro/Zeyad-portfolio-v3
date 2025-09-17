@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Cairo } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -16,6 +16,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+const cairo = Cairo({
+  variable: "--font-Cairo",
+  subsets: ["normal"],
+  weight: ["400"], // لازم تحدد الوزن عشان Lalezar مش variable font
 });
 
 export default function RootLayout({ children }) {
@@ -49,9 +54,11 @@ export default function RootLayout({ children }) {
                 animate={{ scale: 1 }}
                 exit={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl font-bold text-red-500 font-sans"
-              >       <CursorCircle />
-                مرحبــا
+                className={`text-5xl text-red-500 font-bold ${cairo.className}`}
+              >
+                {" "}
+                <CursorCircle />
+                مرحبـا
               </motion.h1>
             </motion.div>
           )}
@@ -66,11 +73,14 @@ export default function RootLayout({ children }) {
           transition={{ type: "spring", stiffness: 70, damping: 20 }}
           className="min-h-screen"
         >
-       <LenisProvider>   <Navbar />
-          <ParticlesBackground />
-        {children} 
-          <CursorCircle />
-          <Footer /></LenisProvider> 
+          <LenisProvider>
+            {" "}
+            <Navbar />
+            {/* <ParticlesBackground /> */}
+            {children}
+            <CursorCircle />
+            <Footer />
+          </LenisProvider>
         </motion.div>
       </body>
     </html>

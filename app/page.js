@@ -193,6 +193,7 @@ export default function Home() {
           },
         ].map((project, index) => (
           <div
+          href={project.url}
             key={index}
             className={`flex gap-3 w-full ${
               project.fullWidth ? "md:w-full" : "md:w-[49.5%]"
