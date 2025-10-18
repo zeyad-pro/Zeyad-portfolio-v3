@@ -35,6 +35,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Zeyad Portfolio</title>
+     <meta
+          name="google-site-verification"
+          content="mCnco6G-xw_EaoqaPd0wPfOjlbZwurZqVwUfEA28kUo"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative`}
