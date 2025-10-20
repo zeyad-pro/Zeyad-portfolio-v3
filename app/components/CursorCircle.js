@@ -13,14 +13,11 @@ export default function CursorCircle() {
   }, []);
 
   return (
-    <>
-      {/* الدائرة */}
-      <div
-        className="pointer-events-none md:block hidden fixed top-0 left-0 w-10 h-10 rounded-full border-2 border-red-500 z-50 transition-transform duration-300 ease-out"
-        style={{
-          transform: `translate(${pos.x - 20}px, ${pos.y - 20}px)`,
-        }}
-      ></div>
-    </>
+    <div
+      className="pointer-events-none md:flex hidden fixed top-0 left-0 w-10 h-10 rounded-full border-2 border-red-500 z-50 transition-transform duration-300 ease-out"
+      style={{
+        transform: `translate(${pos.x - 20}px, ${pos.y - 20}px)`,
+      }}
+    ></div>
   );
 }
