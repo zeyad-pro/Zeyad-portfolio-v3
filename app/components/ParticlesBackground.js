@@ -1,12 +1,21 @@
 "use client";
+import { useCallback, useState, useEffect } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import { useCallback } from "react";
 
 export default function ParticlesBackground() {
+  const [showParticles, setShowParticles] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowParticles(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
+
+  if (!showParticles) return <div />;
 
   return (
     <Particles

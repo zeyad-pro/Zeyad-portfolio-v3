@@ -41,7 +41,7 @@ function Body({ children }) {
         <LenisProvider>
           {" "}
           <Navbar />
-          {/* <ParticlesBackground /> */}
+          <ParticlesBackground />
           {children}
         </LenisProvider>
         <CursorCircle />
