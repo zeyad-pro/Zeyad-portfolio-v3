@@ -7,17 +7,19 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  verification: {
-    google: "mCnco6G-xw_EaoqaPd0wPfOjlbZwurZqVwUfEA28kUo",
-  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Body>{children}</Body>
-      </body>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="mCnco6G-xw_EaoqaPd0wPfOjlbZwurZqVwUfEA28kUo"
+        />
+      </head>
+      <Body children={children}/>
     </html>
   );
 }
