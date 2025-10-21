@@ -1,20 +1,12 @@
-"use client"
+"use client";
 import ShowWelcomeJs from "@/app/hook/showWelcome";
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import CursorCircle from "../CursorCircle";
-import { Cairo } from "next/font/google";
-
-
-const cairo = Cairo({
-  variable: "--font-cairo",
-  subsets: ["arabic"],
-  weight: ["700"], // تختار الوزن اللي عايزه
-});
 
 
 
-function ShowwelcomeL() {
+function ShowwelcomeL({ cairo }) {
   let showWelcome = ShowWelcomeJs();
   console.log(showWelcome);
   return (

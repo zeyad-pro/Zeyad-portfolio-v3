@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import ShowWelcomeJs from "@/app/hook/showWelcome";
 import CursorCircle from "../CursorCircle";
 import ParticlesBackground from "../ParticlesBackground";
@@ -8,27 +8,15 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import ShowwelcomeL from "./showwelcome";
 import LenisProvider from "../lenis";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-function Body({ children }) {
-      let showWelcome = ShowWelcomeJs();
-      console.log(showWelcome);
+function Body({ children, geistMono, geistSans, cairo }) {
+  let showWelcome = ShowWelcomeJs();
   return (
     <body
-      className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative`}
-      cz-shortcut-listen="true"
+    className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative`}
+    cz-shortcut-listen="true" 
     >
-      {/* شاشة الترحيب */}
-      <ShowwelcomeL />
-
+      <ShowwelcomeL cairo={cairo} />
       <motion.div
         initial={{ y: "-100%", opacity: 0 }}
         animate={{
@@ -39,7 +27,6 @@ function Body({ children }) {
         className="min-h-screen"
       >
         <LenisProvider>
-          {" "}
           <Navbar />
           <ParticlesBackground />
           {children}

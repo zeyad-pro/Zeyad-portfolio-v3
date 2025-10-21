@@ -7,7 +7,7 @@ export default function ParticlesBackground() {
   const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowParticles(true), 5000);
+    const timer = setTimeout(() => setShowParticles(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
