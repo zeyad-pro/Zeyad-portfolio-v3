@@ -65,7 +65,8 @@ input, textarea {
 }
 
 
-html, body {
-  overscroll-behavior: auto; /* السماح بالباونص */
-}
 
+
+html {
+  scroll-behavior: smooth;
+}

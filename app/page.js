@@ -23,7 +23,10 @@ export default function Home() {
   return (
     <div className="flex flex-col p-4 md:p-5 gap-4 md:gap-5">
       {/* Hero Section */}
-      <div className="w-full bg-[#212121] border-2 border-[#262626] py-8 md:py-15 px-5 md:px-7 rounded-2xl">
+      <div
+        id="about"
+        className="w-full bg-[#212121] border-2 border-[#262626] py-8 md:py-15 px-5 md:px-7 rounded-2xl"
+      >
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full mb-8 md:mb-13 gap-4">
           <h1 className="text-[#C0C0C0] text-sm md:text-base">
             Front-end web developer
@@ -83,7 +86,7 @@ export default function Home() {
             <motion.img
               animate={{
                 // scale: [1, 1.2, 1],
-                opacity: [0.5, 1 , 0.5] // تكبر وترجع
+                opacity: [0.5, 1, 0.5], // تكبر وترجع
                 // rotate: [0, 355], // تلف 20 درجة وترجع
               }}
               transition={{
@@ -101,7 +104,7 @@ export default function Home() {
       </div>
 
       {/* Skills and Recent Work Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div id="skills" className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Recent works */}
         <div className="w-full">
           <div className="w-full flex justify-center items-center rounded-xl p-[1px] md:p-[0.2%] bg-gradient-to-tr from-red-500 from-20% to-gray-500/50 to-40% mb-4 md:mb-5">
@@ -193,11 +196,12 @@ export default function Home() {
           },
         ].map((project, index) => (
           <div
-          href={project.url}
+            href={project.url}
             key={index}
             className={`flex gap-3 w-full ${
               project.fullWidth ? "md:w-full" : "md:w-[49.5%]"
             }`}
+            id="projects"
           >
             <div
               className={`w-full flex justify-center items-center rounded-xl p-[1px] md:p-[0.4%] ${project.gradient} from-red-500 from-20% to-gray-500/50 to-40% mb-4 md:mb-5`}
